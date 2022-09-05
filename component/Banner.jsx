@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Link from 'next/link'
 
 // import "./Banner.css";
-import Button from '@mui/material/Button';
- import { useHistory } from "react-router-dom";
+  
 
 const  Banner= ()=> {
    const [showSearch, setShowSearch] = useState(false);

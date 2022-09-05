@@ -9,11 +9,11 @@
 
 body {
   margin: 0;
-  background-color: #1a181f;
+  /* background-color: #1a181f;
   background-color: #000;
-  color: #fff;
-  max-height: 100vh;
-  overflow: hidden;
+  color: #fff; */
+ 
+  /* overflow: hidden; */
 }
 
 a {
@@ -24,8 +24,7 @@ a {
 .container {
   justify-content: center;
   text-align: center;
-  height: 95vh;
-}
+ }
 
 .d-flex {
   display: flex;
