@@ -1,130 +1,57 @@
-import { useState, useEffect } from "react";
-import { signMessage } from "../utils/sign";
+import React from "react";
+// import "./Home.css";
+import Banner from "../component/Banner";
+import Header from "../component/Header";
+import Card from "../component/Card";
+ 
+// import {listUploads} from "../database/put-files";
+function Index() {
 
-import Link from "next/link";
-import Metamask from "../component/metamask";
-
-const Index = () => {
-  const [haveMetamask, sethaveMetamask] = useState(true);
-
-  const [client, setclient] = useState({
-    isConnected: false,
-  });
-
-  const checkConnection = async () => {
-    const { ethereum } = window;
-    if (ethereum) {
-      sethaveMetamask(true);
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-      if (accounts.length > 0) {
-        setclient({
-          isConnected: true,
-          address: accounts[0],
-        });
-      } else {
-        setclient({
-          isConnected: false,
-        });
-      }
-    } else {
-      sethaveMetamask(false);
-    }
-  };
-
-  const connectWeb3 = async () => {
-    try {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-        console.log("Metamask not detected");
-        return;
-      }
-
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-
-      setclient({
-        isConnected: true,
-        address: accounts[0],
-      });
-    } catch (error) {
-      console.log("Error connecting to metamask", error);
-    }
-  };
-
-  useEffect(() => {
-    checkConnection();
-  }, []);
-
+   
   return (
-    <>
-      {/* Navbar */}
-      <nav className="fren-nav d-flex">
-        <div>
-          <h3>MENU_</h3>
-        </div>
-        <div className="d-flex" style={{ marginLeft: "auto" }}>
-          <div>
-            <button className="btn connect-btn" onClick={connectWeb3}>
-              {client.isConnected ? (
-                <>
-                  {client.address.slice(0, 4)}...
-                  {client.address.slice(38, 42)}
-                </>
-              ) : (
-                <>Connect Wallet</>
-              )}
-            </button>
-          </div>
-          <div>
-            <Link href="https://twitter.com/asaolu_elijah">
-              <button className="btn tw-btn">TW</button>
-            </Link>
-          </div>
-        </div>
-      </nav>
-      {/* Navbar end */}
+    <div className="home">
+      <Header></Header>
+      <Banner />
 
-      <section className="container d-flex">
-        <main>
-          <h1 className="main-title">Awesome DApp 🚀</h1>
-
-          <p className="main-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
-            suscipit perferendis tempore <br /> eveniet id pariatur error
-          </p>
-
-          {/* ---- */}
-          <p>
-            {!haveMetamask ? (
-              <Metamask />
-            ) : client.isConnected ? (
-              <>
-                <br />
-                <h2>You're connected ✅</h2>
-                <button
-                  onClick={signMessage}
-                  type="button"
-                  className="btn sign-btn"
-                >
-                  Sign Message
-                </button>
-              </>
-            ) : (
-              <>
-                <br />
-                <button className="btn connect-btn" onClick={connectWeb3}>
-                  Connect Wallet
-                </button>
-              </>
-            )}
-          </p>
-          {/* ---- */}
-        </main>
-      </section>
-    </>
+      <div className="home__section">
+        <Card
+          src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+          title="Online Experiences"
+          description="Unique activities we can do together, led by a world of hosts."
+        />
+        <Card
+          src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
+          title="Unique stays"
+          description="Spaces that are more than just a place to sleep."
+        />
+        <Card
+          src="https://a0.muscache.com/im/pictures/fdb46962-10c1-45fc-a228-d0b055411448.jpg?im_w=720"
+          title="Entire homes"
+          description="Comfortable private places, with room for friends or family."
+        />
+      </div>
+      <div className="home__section">
+        <Card
+          src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
+          title="3 Bedroom Flat in Bournemouth"
+          description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
+          price="£130/night"
+        />
+        <Card
+          src="https://media.nomadicmatt.com/2019/airbnb_breakup4.jpg"
+          title="Penthouse in London"
+          description="Enjoy the amazing sights of London with this stunning penthouse"
+          price="£350/night"
+        />
+        <Card
+          src="https://media.nomadicmatt.com/2018/apartment.jpg"
+          title="1 Bedroom apartment"
+          description="Superhost with great amenities and a fabolous shopping complex nearby"
+          price="£70/night"
+        />
+      </div>
+    </div>
   );
-};
+}
 
 export default Index;
