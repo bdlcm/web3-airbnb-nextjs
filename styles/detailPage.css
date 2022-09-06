@@ -1,0 +1,127 @@
+.result {
+  /* display: flex; */
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.result:hover {
+  opacity: 0.8;
+}
+
+.result > img {
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.result__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.result__info > .result__stars {
+ margin-bottom: 1%;
+}
+
+.result__heart {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.result__body {
+  display: flex;
+  width: 100%;
+  margin-top:5%;
+  justify-content: space-between;
+}
+
+.result__infoTop {
+  width: 56%;
+  position: relative;
+}
+
+.result__infoTop > h3 {
+  margin-top: 10px;
+}
+.result__info > h2 {
+  margin-bottom: 1%;
+}
+
+.result__infoTop > p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.result__infoBottom {
+  /* display: flex; */
+  /* left: 100%;
+    transform: translate(-100%, 10px); */
+   
+    border: 1px solid rgb(221, 221, 221);
+       border-radius: 10px;
+  width: 33%;
+  padding: 2%;
+ 
+  margin-top:10px;
+  position: relative;
+  box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+}
+
+.result__infoBottom > button{
+ 
+  text-transform: inherit !important;
+  background: var(--dls19-brand-gradient, linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%)) !important;;
+  color: white;
+  cursor: pointer !important;
+  display: inline-block !important;
+  margin: 0px !important;
+  position: relative !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  touch-action: manipulation !important;
+
+  border-radius: 5px;
+  outline: none !important;
+  padding: 14px 24px !important;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
+  -webkit-tap-highlight-color: transparent !important;
+  border: none !important;
+  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
+  color: rgb(255, 255, 255) !important;
+  width: 100% !important;
+ 
+}
+
+ 
+
+.result__stars {
+  display: flex;
+  align-items: center;
+}
+.result__total {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2%;
+}
+
+.result__price > p {
+  text-align: right;
+  
+}
+
+.result__price {
+  bottom: 20px;
+  right: 30px;
+  padding-bottom: 2%;
+  color: black;
+  justify-content: space-between;
+  display: flex;
+}

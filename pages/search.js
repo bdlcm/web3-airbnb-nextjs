@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
  import SearchResult from "../component/SearchResults";
 import Header from "../component/Header";
  
-
 function Search() {
  
   return (
