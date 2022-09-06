@@ -26,9 +26,8 @@
   justify-content: space-between;
 }
 
-
 .result__info > .result__stars {
- margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 .result__heart {
@@ -39,7 +38,7 @@
 .result__body {
   display: flex;
   width: 100%;
-  margin-top:5%;
+  margin-top: 5%;
   justify-content: space-between;
 }
 
@@ -64,21 +63,23 @@
   /* display: flex; */
   /* left: 100%;
     transform: translate(-100%, 10px); */
-   
-    border: 1px solid rgb(221, 221, 221);
-       border-radius: 10px;
+
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
   width: 33%;
   padding: 2%;
- 
-  margin-top:10px;
+
+  margin-top: 10px;
   position: relative;
   box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
 }
 
-.result__infoBottom > button{
- 
+.result__infoBottom > button {
   text-transform: inherit !important;
-  background: var(--dls19-brand-gradient, linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%)) !important;;
+  background: var(
+    --dls19-brand-gradient,
+    linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%)
+  ) !important;
   color: white;
   cursor: pointer !important;
   display: inline-block !important;
@@ -91,16 +92,19 @@
   border-radius: 5px;
   outline: none !important;
   padding: 14px 24px !important;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
   -webkit-tap-highlight-color: transparent !important;
   border: none !important;
-  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 77) 0%,
+    rgb(227, 28, 95) 50%,
+    rgb(215, 4, 102) 100%
+  ) !important;
   color: rgb(255, 255, 255) !important;
   width: 100% !important;
- 
 }
-
- 
 
 .result__stars {
   display: flex;
@@ -114,7 +118,6 @@
 
 .result__price > p {
   text-align: right;
-  
 }
 
 .result__price {

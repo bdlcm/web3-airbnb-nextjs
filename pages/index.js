@@ -3,11 +3,9 @@ import React from "react";
 import Banner from "../component/Banner";
 import Header from "../component/Header";
 import Card from "../component/Card";
- 
+
 // import {listUploads} from "../database/put-files";
 function Index() {
-
-   
   return (
     <div className="home">
       <Header></Header>

@@ -1,6 +1,5 @@
 .banner {
-  background: url("../public/fireplace.jpg")
-    center center;
+  background: url("../public/fireplace.jpg") center center;
   height: 50vh;
   position: relative;
 }

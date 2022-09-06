@@ -1,12 +1,11 @@
 import React from "react";
-  import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import StarIcon from '@mui/icons-material/Star';
- import  Link  from "next/link";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import StarIcon from "@mui/icons-material/Star";
+import Link from "next/link";
 
 const SearchResult = (props) => {
- 
   return props.results.map((data) => (
-     <Link href={`/results/${data.id}`}>
+    <Link href={`/results/${data.id}`}>
       <div className="searchResult" key={data.id}>
         <img src={data.img} alt="" />
         <FavoriteBorderIcon className="searchResult__heart" />
@@ -28,7 +27,6 @@ const SearchResult = (props) => {
             </div>
             <div className="searchResults__price">
               <h2>{data.price}</h2>
-       
             </div>
           </div>
         </div>

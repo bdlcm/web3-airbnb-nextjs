@@ -7,7 +7,6 @@ import "../styles/searchPage.css";
 import "../styles/searchResults.css";
 import "../styles/detailPage.css";
 
-
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }

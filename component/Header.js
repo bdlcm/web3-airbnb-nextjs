@@ -1,10 +1,10 @@
 import React from "react";
-  import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
-import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
- 
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
+import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
+
 import { Avatar, Button } from "@mui/material";
-import  Link  from "next/link";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -17,17 +17,14 @@ function Header() {
         />
       </Link>
 
- 
-
       <Link href="/registerhost">
-      <div className="header__right">
-        <Button>
-        <p>Become a host</p>
-        </Button>
-     
- 
-        <Avatar />
-      </div>
+        <div className="header__right">
+          <Button>
+            <p>Become a host</p>
+          </Button>
+
+          <Avatar />
+        </div>
       </Link>
     </div>
   );
